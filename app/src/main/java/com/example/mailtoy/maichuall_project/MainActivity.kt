@@ -17,4 +17,9 @@ class MainActivity  : AppCompatActivity() {
         val intent = Intent(this,ShowActivity::class.java)
         startActivity(intent)
     }
+
+    fun mapButtonClicked(view: View) {
+        val intent = Intent(this,MapActivity::class.java)
+        startActivity(intent)
+    }
 }

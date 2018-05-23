@@ -16,6 +16,28 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".ShowActivity"
+            android:label="Events"
+            android:launchMode="singleTop">
+            <meta-data android:name="android.support.PARENT_ACTIVITY"
+            android:value=".MainActivity"/>
+        </activity>
+
+
+        <activity android:name=".InputActivity"
+            android:label="Add Events">
+            <meta-data android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ShowActivity"/>
+
+        </activity>
+
+        <activity android:name=".MapActivity"
+            android:label="Map">
+            <meta-data android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity"/>
+
+        </activity>
     </application>
 
 </manifest>

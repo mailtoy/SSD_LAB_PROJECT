@@ -46,6 +46,5 @@ class ShowActivity : AppCompatActivity() {
     fun newButtonClick(view: View) {
         val intent = Intent(this,InputActivity::class.java)
         startActivityForResult(intent, INPUT_REQUEST_CODE)
-
     }
 }
