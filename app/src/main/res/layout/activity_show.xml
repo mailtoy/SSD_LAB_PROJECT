@@ -5,7 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.mailtoy.maichuall_project.ShowActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@drawable/fur">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="" />
 
     <Button
         android:layout_width="match_parent"
@@ -17,20 +23,7 @@
         android:id="@+id/mainTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Click a button for add events!" />
-
-    <TextView
-        android:id="@+id/mainTimeView"
-        android:layout_width="344dp"
-        android:layout_height="wrap_content"
-        android:text="Click a button time" />
-
-    <TextView
-        android:id="@+id/mainPlaceView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Click a button for place!"
-        />
+        android:text="" />
 
     <ListView
         android:id="@+id/itemListView"

@@ -5,7 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.mailtoy.maichuall_project.InputActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@drawable/b">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="" />
 
     <TextView
         android:layout_width="match_parent"
@@ -22,6 +28,11 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:text="" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:id="@+id/TimeEvent"
         android:text="Time:" />
 
@@ -31,6 +42,11 @@
         android:ems="10"
         android:id="@+id/inputTimeEditText"
         android:text=""/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="" />
 
     <TextView
         android:layout_width="match_parent"

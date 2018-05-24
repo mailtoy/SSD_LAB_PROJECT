@@ -5,25 +5,41 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.mailtoy.maichuall_project.MainActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@drawable/main">
 
     <CalendarView
         android:id="@+id/calendarView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:text="" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=" Username: " />
+
+    <EditText
+        android:id="@+id/namePerson"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="" />
 
     <Button
         android:id="@+id/strBN"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="startButtonClicked"
-        android:text="Start" />
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="mapButtonClicked"
-        android:text="MAP" />
-
+        android:text="Start"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="415dp" />
 
 </LinearLayout>
