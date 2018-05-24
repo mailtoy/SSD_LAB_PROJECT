@@ -14,7 +14,6 @@ class ShowActivity : AppCompatActivity() {
     private val INPUT_REQUEST_CODEs = 200
     val items = ArrayList<String>()
     var adapter: ArrayAdapter<String>? = null
-    var adapters: ArrayAdapter<String>? = null
 
 
 
@@ -23,6 +22,8 @@ class ShowActivity : AppCompatActivity() {
         setContentView(R.layout.activity_show)
 //        val intents = Intent(this,MainActivity::class.java)
 //        startActivityForResult(intents, INPUT_REQUEST_CODEs)
+
+        mainTextView.text = intent.getStringExtra("TASK_NAMEP")
 
 
         adapter = ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,items)
@@ -34,8 +35,8 @@ class ShowActivity : AppCompatActivity() {
         super.onActivityResult(requestCode, resultCode, data)
 
 
-            if (requestCode == INPUT_REQUEST_CODEs) {
-                if(data != null) {
+        if (requestCode == INPUT_REQUEST_CODEs) {
+            if(data != null) {
                 mainTextView.text = data.getStringExtra("TASK_NAMEP")
             }
         }

@@ -21,11 +21,11 @@ class MainActivity  : AppCompatActivity() {
         val intent = Intent(this,ShowActivity::class.java)
         val taskNameP = namePerson.text.toString()
         if(taskNameP != ""){
-            intent.putExtra("TASK_NAMEP", taskNameP+"")
+            intent.putExtra("TASK_NAMEP", "\n ID: " + taskNameP)
 
-            setResult(Activity.RESULT_OK,intent)
-//            val intents = Intent(this,ShowActivity::class.java)
-            startActivityForResult(intent, INPUT_REQUEST_CODEs)
+            // setResult(Activity.RESULT_OK,intent)
+            // val intents = Intent(this,ShowActivity::class.java)
+            startActivity(intent)
 
         } else {
             setResult(Activity.RESULT_CANCELED)
