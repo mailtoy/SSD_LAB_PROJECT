@@ -21,10 +21,8 @@ class ShowActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_show)
-        val intents = Intent(this,MainActivity::class.java)
-        startActivityForResult(intents, INPUT_REQUEST_CODEs)
-
-
+//        val intents = Intent(this,MainActivity::class.java)
+//        startActivityForResult(intents, INPUT_REQUEST_CODEs)
 
 
         adapter = ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,items)
