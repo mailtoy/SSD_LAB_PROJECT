@@ -5,7 +5,6 @@ import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import kotlinx.android.synthetic.main.activity_input.*
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity  : AppCompatActivity() {
@@ -22,18 +21,11 @@ class MainActivity  : AppCompatActivity() {
         val taskNameP = namePerson.text.toString()
         if(taskNameP != ""){
             intent.putExtra("TASK_NAMEP", "\n ID: " + taskNameP)
-
-            // setResult(Activity.RESULT_OK,intent)
-            // val intents = Intent(this,ShowActivity::class.java)
             startActivity(intent)
-
+            finish()
         } else {
-            setResult(Activity.RESULT_CANCELED)
+            namePerson.setText("")
         }
-
-        finish()
-
-
 
     }
 

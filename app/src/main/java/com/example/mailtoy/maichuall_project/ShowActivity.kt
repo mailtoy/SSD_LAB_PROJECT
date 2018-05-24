@@ -15,45 +15,29 @@ class ShowActivity : AppCompatActivity() {
     val items = ArrayList<String>()
     var adapter: ArrayAdapter<String>? = null
 
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_show)
-//        val intents = Intent(this,MainActivity::class.java)
-//        startActivityForResult(intents, INPUT_REQUEST_CODEs)
-
         mainTextView.text = intent.getStringExtra("TASK_NAMEP")
-
-
         adapter = ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,items)
         itemListView.adapter = adapter
-
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
-
-
         if (requestCode == INPUT_REQUEST_CODEs) {
             if(data != null) {
                 mainTextView.text = data.getStringExtra("TASK_NAMEP")
             }
         }
-
         if(requestCode == INPUT_REQUEST_CODE){
             if(resultCode != Activity.RESULT_CANCELED){
                 if(data != null){
-
-//                    mainTimeView.text = data.getStringExtra("TASK_TIME")
-//                    mainPlaceView.text = data.getStringExtra("TASK_PLACE")
                     items.add(data.getStringExtra("TASK_NAME" ) +"\n"+ data.getStringExtra("TASK_TIME")
                             +"\n"+ data.getStringExtra("TASK_PLACE"))
                     adapter?.notifyDataSetChanged()
                 }
-
             } else {
-//                mainTextView.text = "CANCELED!!"
             }
         }
     }
